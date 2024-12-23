@@ -1,0 +1,9 @@
+rootProject.name = 'JavaSpring'
+
+include 'defenseos-api'
+include 'defenseos-cdm'
+include 'defenseos-radar-abc'
+include 'defenseos-radar-xyz'
+include 'defenseos-sawtooth'
+include 'defenseos-track-manager'
+

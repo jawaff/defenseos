@@ -1,0 +1,14 @@
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.dzyne.defenseos.sawtooth.SawtoothProductApp'
+    }
+}
+
+dependencies {
+    implementation(project(':defenseos-radar-abc'))
+    implementation(project(':defenseos-radar-xyz'))
+    implementation(project(':defenseos-track-manager'))
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

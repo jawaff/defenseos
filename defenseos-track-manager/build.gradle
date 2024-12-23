@@ -1,0 +1,11 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    api(project(':defenseos-api'))
+    api(project(':defenseos-cdm'))
+
+    implementation 'org.springframework.boot:spring-boot'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
