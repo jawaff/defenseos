@@ -4,10 +4,6 @@ plugins {
     id 'java'
 }
 
-ext {
-    lombokVersion = "1.18.36"
-}
-
 allprojects {
     apply plugin: 'io.spring.dependency-management'
 
@@ -31,8 +27,18 @@ subprojects {
     apply plugin: 'java'
 
     dependencies {
-        testImplementation(platform('org.junit:junit-bom:5.10.0'))
-        testImplementation('org.junit.jupiter:junit-jupiter')
+        testImplementation platform('org.junit:junit-bom:5.10.0')
+        testImplementation 'org.junit.jupiter:junit-jupiter'
+        testImplementation "org.junit.jupiter:junit-jupiter-params"
+        testImplementation 'org.assertj:assertj-core:3.27.0'
+
+        constraints {
+            annotationProcessor 'org.projectlombok:lombok:1.18.36'
+            compileOnly 'org.projectlombok:lombok:1.18.36'
+            testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
+            testCompileOnly 'org.projectlombok:lombok:1.18.36'
+            implementation 'com.google.guava:guava:33.4.0-jre'
+        }
     }
 
     test {

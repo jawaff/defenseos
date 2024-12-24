@@ -3,8 +3,7 @@ plugins {
 }
 
 dependencies {
-    api(project(':defenseos-api'))
-    api(project(':defenseos-cdm'))
+    api project(':defenseos-api')
 
     implementation 'org.springframework.boot:spring-boot'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

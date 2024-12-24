@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    api(project(':defenseos-cdm'))
+    api project(':defenseos-cdm')
 }
