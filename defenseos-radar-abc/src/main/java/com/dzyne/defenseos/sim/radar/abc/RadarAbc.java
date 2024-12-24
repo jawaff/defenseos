@@ -1,6 +1,7 @@
 package com.dzyne.defenseos.sim.radar.abc;
 
 import com.dzyne.defenseos.api.radar.AbstractRadarSim;
+import com.dzyne.defenseos.detections.radar.Point;
 import com.dzyne.defenseos.detections.radar.RadarDetection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,26 +13,26 @@ import java.util.concurrent.TimeUnit;
 @Service
 public final class RadarAbc extends AbstractRadarSim {
     private static final String SOURCE = "RadarAbc";
-    private static final float ORIGIN_LATITUDE = 15f;
-    private static final float ORIGIN_LONGITUDE = -30f;
-    private static final float ORIGIN_ALTITUDE = 1000f;
+    private static final Point ORIGIN = new Point(15f, -30f, 1000f);
 
     public RadarAbc(@Autowired final ScheduledExecutorService sharedScheduledExecutor) {
         sharedScheduledExecutor.scheduleAtFixedRate(
-                this::publishNewRadarDetectionEvent,
+                this::publishRadarDetection,
                 0,
                 2,
                 TimeUnit.SECONDS
         );
     }
 
-    private void publishNewRadarDetectionEvent() {
-        publishRadarDetection(
-                RadarDetection.builder()
-                        .detectionId(UUID.randomUUID())
-                        .source(SOURCE)
-                        .point(randomPoint(ORIGIN_LATITUDE, ORIGIN_LONGITUDE, ORIGIN_ALTITUDE))
-                        .build()
-        );
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected RadarDetection produceNewRadarDetection() {
+        return RadarDetection.builder()
+                .detectionId(UUID.randomUUID())
+                .source(SOURCE)
+                .point(randomPointShift(ORIGIN))
+                .build();
     }
 }
