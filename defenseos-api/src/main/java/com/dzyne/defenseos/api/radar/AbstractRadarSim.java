@@ -61,6 +61,12 @@ public abstract class AbstractRadarSim implements IRadar {
         final var radarDetection = this.produceNewRadarDetection();
         System.out.printf("Publishing from %s%n", radarDetection);
 
+        // In actuality the current radar implementations shouldn't be publishing from multiple threads, but
+        // there's an almost insignificant chance that the publishRadarDetection() function takes longer than
+        // 2 seconds. I accounted for it because maybe that 2 seconds interval might change in the future or maybe
+        // there's a new radar implementation that gets added that publishes from multiple threads.
+        // This is mostly just a paranoid safety measure done out of habit.
+
         // ArrayList isn't thread safe by default and synchronizing on the list prevents multiple threads
         // from iterating over our list. CopyOnWriteArrayList is a bit faster in comparison and uses snapshots of the
         // list for iteration.
