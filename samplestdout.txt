@@ -1,0 +1,160 @@
+.\gradlew.bat run
+
+> Task :defenseos-sawtooth:run
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2024-12-23T21:19:21.247-07:00  INFO 10532 --- [           main] c.d.d.sawtooth.SawtoothProductApp        : Starting SawtoothProductApp using Java 23.0.1 with PID 10532 (C:\Users\Cake\Documents\defenseos\defenseos-sawtooth\build\classes\java\main started by Cake in C:\Users\Cake\Documents\defenseos\defenseos-sawtooth)
+2024-12-23T21:19:21.251-07:00  INFO 10532 --- [           main] c.d.d.sawtooth.SawtoothProductApp        : No active profile set, falling back to 1 default profile: "default"
+Publishing from RadarXyz:-49.806, 75.026, 1500.00
+Publishing from RadarAbc:14.959, -29.851, 1000.00
+Receiving from RadarXyz:-49.806, 75.026, 1500.00
+Receiving from RadarAbc:14.959, -29.851, 1000.00
+2024-12-23T21:19:21.623-07:00  INFO 10532 --- [           main] c.d.d.sawtooth.SawtoothProductApp        : Started SawtoothProductApp in 0.608 seconds (process running for 0.835)
+Beans:
+org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+org.springframework.context.annotation.internalCommonAnnotationProcessor
+org.springframework.context.event.internalEventListenerProcessor
+org.springframework.context.event.internalEventListenerFactory
+sawtoothProductApp
+org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory
+appConfig
+radarAbc
+radarXyz
+trackManager
+sharedScheduledExecutor
+org.springframework.boot.autoconfigure.AutoConfigurationPackages
+org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+propertySourcesPlaceholderConfigurer
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration
+forceAutoProxyCreatorToUseClassProxying
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+applicationAvailability
+org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+org.springframework.boot.context.internalConfigurationPropertiesBinder
+org.springframework.boot.context.properties.BoundConfigurationProperties
+org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter
+org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+lifecycleProcessor
+spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties
+org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
+spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
+org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor
+org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
+fileWatcher
+sslPropertiesSslBundleRegistrar
+sslBundleRegistry
+spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties
+org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration
+threadPoolTaskExecutorBuilder
+org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration
+simpleAsyncTaskExecutorBuilder
+org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties
+org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$ThreadPoolTaskSchedulerBuilderConfiguration
+threadPoolTaskSchedulerBuilder
+org.springframework.boot.autoconfigure.task.TaskSchedulingConfigurations$SimpleAsyncTaskSchedulerBuilderConfiguration
+simpleAsyncTaskSchedulerBuilder
+org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration
+spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties
+org.springframework.aop.config.internalAutoProxyCreator
+Publishing from RadarXyz:-50.243, 74.948, 1500.00
+Publishing from RadarAbc:15.218, -29.990, 1000.00
+Receiving from RadarAbc:15.218, -29.990, 1000.00
+Receiving from RadarXyz:-50.243, 74.948, 1500.00
+Publishing from RadarAbc:15.046, -29.887, 1000.00
+Publishing from RadarXyz:-49.769, 74.760, 1500.00
+Receiving from RadarXyz:-49.769, 74.760, 1500.00
+Receiving from RadarAbc:15.046, -29.887, 1000.00
+Publishing from RadarXyz:-50.150, 74.953, 1500.00
+Publishing from RadarAbc:14.769, -29.991, 1000.00
+Receiving from RadarAbc:14.769, -29.991, 1000.00
+Receiving from RadarXyz:-50.150, 74.953, 1500.00
+Publishing from RadarAbc:15.092, -29.916, 1000.00
+Receiving from RadarAbc:15.092, -29.916, 1000.00
+Publishing from RadarXyz:-50.173, 74.928, 1500.00
+Receiving from RadarXyz:-50.173, 74.928, 1500.00
+Publishing from RadarAbc:15.024, -30.154, 1000.00
+Receiving from RadarAbc:15.024, -30.154, 1000.00
+Publishing from RadarXyz:-50.146, 75.204, 1500.00
+Receiving from RadarXyz:-50.146, 75.204, 1500.00
+Publishing from RadarAbc:15.028, -29.972, 1000.00
+Receiving from RadarAbc:15.028, -29.972, 1000.00
+Publishing from RadarXyz:-50.088, 74.812, 1500.00
+Receiving from RadarXyz:-50.088, 74.812, 1500.00
+Publishing from RadarAbc:14.943, -29.979, 1000.00
+Receiving from RadarAbc:14.943, -29.979, 1000.00
+Publishing from RadarXyz:-50.235, 74.771, 1500.00
+Receiving from RadarXyz:-50.235, 74.771, 1500.00
+Publishing from RadarAbc:15.048, -30.157, 1000.00
+Receiving from RadarAbc:15.048, -30.157, 1000.00
+Publishing from RadarXyz:-50.124, 74.858, 1500.00
+Receiving from RadarXyz:-50.124, 74.858, 1500.00
+Publishing from RadarAbc:14.894, -29.960, 1000.00
+Publishing from RadarXyz:-49.844, 75.066, 1500.00
+Receiving from RadarXyz:-49.844, 75.066, 1500.00
+Receiving from RadarAbc:14.894, -29.960, 1000.00
+Publishing from RadarAbc:14.957, -30.112, 1000.00
+Publishing from RadarXyz:-49.966, 74.956, 1500.00
+Receiving from RadarXyz:-49.966, 74.956, 1500.00
+Receiving from RadarAbc:14.957, -30.112, 1000.00
+Publishing from RadarAbc:14.889, -30.093, 1000.00
+Receiving from RadarAbc:14.889, -30.093, 1000.00
+Publishing from RadarXyz:-50.007, 74.903, 1500.00
+Receiving from RadarXyz:-50.007, 74.903, 1500.00
+Publishing from RadarAbc:15.231, -30.159, 1000.00
+Receiving from RadarAbc:15.231, -30.159, 1000.00
+Publishing from RadarXyz:-49.892, 75.072, 1500.00
+Receiving from RadarXyz:-49.892, 75.072, 1500.00
+Publishing from RadarXyz:-49.798, 75.090, 1500.00
+Publishing from RadarAbc:14.791, -29.946, 1000.00
+Receiving from RadarAbc:14.791, -29.946, 1000.00
+Receiving from RadarXyz:-49.798, 75.090, 1500.00
+Publishing from RadarAbc:14.915, -30.118, 1000.00
+Receiving from RadarAbc:14.915, -30.118, 1000.00
+Publishing from RadarXyz:-50.156, 74.917, 1500.00
+Receiving from RadarXyz:-50.156, 74.917, 1500.00
+Publishing from RadarAbc:14.851, -29.821, 1000.00
+Publishing from RadarXyz:-50.249, 75.105, 1500.00
+Receiving from RadarXyz:-50.249, 75.105, 1500.00
+Receiving from RadarAbc:14.851, -29.821, 1000.00
+Publishing from RadarXyz:-50.191, 74.914, 1500.00
+Publishing from RadarAbc:14.843, -30.138, 1000.00
+Receiving from RadarAbc:14.843, -30.138, 1000.00
+Receiving from RadarXyz:-50.191, 74.914, 1500.00
+Publishing from RadarAbc:14.818, -30.208, 1000.00
+Receiving from RadarAbc:14.818, -30.208, 1000.00
+Publishing from RadarXyz:-49.917, 74.856, 1500.00
+Receiving from RadarXyz:-49.917, 74.856, 1500.00
+Publishing from RadarAbc:15.041, -29.891, 1000.00
+Receiving from RadarAbc:15.041, -29.891, 1000.00
+Publishing from RadarXyz:-49.886, 75.103, 1500.00
+Receiving from RadarXyz:-49.886, 75.103, 1500.00
+Publishing from RadarXyz:-50.192, 75.212, 1500.00
+Receiving from RadarXyz:-50.192, 75.212, 1500.00
+Publishing from RadarAbc:15.036, -29.887, 1000.00
+Receiving from RadarAbc:15.036, -29.887, 1000.00
+Publishing from RadarAbc:14.978, -29.997, 1000.00
+Receiving from RadarAbc:14.978, -29.997, 1000.00
+Publishing from RadarXyz:-50.038, 74.973, 1500.00
+Receiving from RadarXyz:-50.038, 74.973, 1500.00
+Publishing from RadarAbc:14.860, -29.831, 1000.00
+Publishing from RadarXyz:-50.015, 74.995, 1500.00
+Receiving from RadarXyz:-50.015, 74.995, 1500.00
+Receiving from RadarAbc:14.860, -29.831, 1000.00
+Publishing from RadarAbc:14.821, -30.191, 1000.00
+Publishing from RadarXyz:-49.900, 74.834, 1500.00
+Receiving from RadarXyz:-49.900, 74.834, 1500.00
+Receiving from RadarAbc:14.821, -30.191, 1000.00

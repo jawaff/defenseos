@@ -21,10 +21,28 @@ allprojects {
             mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
         }
     }
+
+    configurations.configureEach {
+        resolutionStrategy {
+            // Fails builds when version conflicts are encountered (includes transitive dependencies).
+            // Multiple different versions of the same dependency will cause version conflicts (i.e. group and name are equal).
+            failOnVersionConflict()
+        }
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        // Turn on all warnings and fail the build if there is a warning.
+        // We unfortunately have to suppress the "requires directive for an automatic module"
+        // warning because guava is an automatic module.
+        // Processing warnings are turned off because of Junit annotations not being claimed by
+        // an annotation processor.
+        options.compilerArgs << '-Xlint:all,-processing' << '-Werror' << '-Xlint:-requires-automatic'
+    }
 }
 
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'jacoco'
 
     dependencies {
         testImplementation platform('org.junit:junit-bom:5.10.0')
@@ -41,7 +59,18 @@ subprojects {
         }
     }
 
-    test {
-        useJUnitPlatform()
+    jacoco {
+        toolVersion = "0.8.12"
+        reportsDirectory = layout.buildDirectory.dir('reports/jacoco')
     }
+
+    tasks.withType(Test).configureEach {
+        useJUnitPlatform()
+
+        testLogging.showStandardStreams = true
+
+        finalizedBy jacocoTestReport
+    }
+
+    jacocoTestReport.dependsOn test
 }
