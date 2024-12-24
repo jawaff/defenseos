@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 @Service
 public final class RadarXyz extends AbstractRadarSim {
     private static final String SOURCE = "RadarXyz";
-    private static final Point ORIGIN = new Point(15f, -30f, 1000f);
+    private static final Point ORIGIN = new Point(-50f, 75f, 1500f);
 
     public RadarXyz(@Autowired final ScheduledExecutorService sharedScheduledExecutor) {
         sharedScheduledExecutor.scheduleAtFixedRate(
