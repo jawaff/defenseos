@@ -1,7 +1,17 @@
+plugins {
+    id "application"
+}
+
+def mainClass = 'com.dzyne.defenseos.sawtooth.SawtoothProductApp'
+
 jar {
     manifest {
-        attributes 'Main-Class': 'com.dzyne.defenseos.sawtooth.SawtoothProductApp'
+        attributes 'Main-Class': mainClass
     }
+}
+
+application {
+    mainClassName = mainClass
 }
 
 dependencies {
@@ -11,4 +21,19 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.register('uberJar', Jar) {
+    manifest {
+        attributes 'Main-Class': mainClass
+    }
+
+    archiveClassifier = 'uber'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from sourceSets.main.output
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
 }
